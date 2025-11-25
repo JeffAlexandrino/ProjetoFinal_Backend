@@ -37,39 +37,7 @@ Desenvolver um sistema de gerenciamento de biblioteca que automatize os principa
 6. Livro fica disponível para novos empréstimos
 
 ## DER (Diagrama Entidade-Relacionamento)
-
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   USUARIO   │    │  EMPRESTIMO  │    │    LIVRO    │
-├─────────────┤    ├─────────────┤    ├─────────────┤
-│ id          │◄───│ id          │───►│ id          │
-│ nome        │    │ usuario_id  │    │ titulo      │
-│ email       │    │ livro_id    │    │ isbn        │
-│ telefone    │    │ data_emprest│    │ ano_public  │
-│ endereco    │    │ data_devoluc│    │ edicao      │
-│ data_cadastro│   │ status      │    │ quantidade  │
-│ status      │    │ multa       │    │ disponiveis │
-└─────────────┘    └─────────────┘    └─────────────┘
-                            │                  │
-                            │                  │
-                    ┌─────────────┐    ┌─────────────┐
-                    │   AUTOR     │    │ CATEGORIA   │
-                    ├─────────────┤    ├─────────────┤
-                    │ id          │    │ id          │
-                    │ nome        │    │ nome        │
-                    │ biografia   │    │ descricao   │
-                    │ nacionalidad│    └─────────────┘
-                    └─────────────┘           │
-                          │                   │
-                    ┌─────────────────────────┘
-                    │
-               ┌─────────────┐
-               │ LIVRO_AUTOR │
-               ├─────────────┤
-               │ livro_id    │
-               │ autor_id    │
-               └─────────────┘
-```
+![DER](img/der.png)
 
 ### Descrição das Tabelas
 
