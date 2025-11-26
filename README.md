@@ -1,7 +1,5 @@
 # Sistema de Gerenciamento de Biblioteca
-
 ## Definição do Problema
-
 Atualmente, muitas bibliotecas ainda utilizam sistemas manuais ou planilhas para controlar seu acervo, empréstimos e usuários. Isso gera problemas como:
 - Dificuldade no controle de livros disponíveis vs. emprestados
 - Falta de histórico de empréstimos
@@ -10,7 +8,6 @@ Atualmente, muitas bibliotecas ainda utilizam sistemas manuais ou planilhas para
 - Processos manuais para cadastro de usuários
 
 ## Solução Proposta
-
 Desenvolver um sistema de gerenciamento de biblioteca que automatize os principais processos:
 - **Cadastro e gerenciamento de livros** - controle completo do acervo
 - **Cadastro de usuários** - controle de membros da biblioteca
@@ -40,7 +37,6 @@ Desenvolver um sistema de gerenciamento de biblioteca que automatize os principa
 ![DER](img/der.png)
 
 ### Descrição das Tabelas
-
 #### 1. USUARIO
 - Armazena informações dos usuários/membros da biblioteca
 - Campos: id, nome, email, telefone, endereço, data_cadastro, status
@@ -70,7 +66,6 @@ Desenvolver um sistema de gerenciamento de biblioteca que automatize os principa
 - Campos: livro_id, categoria_id
 
 ## Estrutura do Projeto Spring Boot
-
 ```
 src/
 ├── main/
@@ -97,4 +92,13 @@ src/
 - `PUT /api/emprestimos/{id}/devolucao` - Registrar devolução
 - `GET /api/usuarios/{id}/emprestimos` - Histórico de empréstimos
 
-Esta estrutura atende todos os requisitos do projeto com um tema bem definido e funcionalidades úteis para o contexto de uma biblioteca.
+---
+### URLs para uso
+- Swagger UI: http://localhost:8080/swagger-ui.html
+- H2 Console: http://localhost:8080/h2-console
+- API Base: http://localhost:8080/api-docs
+
+### Para testar no H2 Console:
+- JDBC URL: jdbc:h2:mem:testdb
+- User Name: sa
+- Password: (deixe em branco)
